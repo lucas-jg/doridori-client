@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import Header from './Header'
 
 const PagaTemplateBlock = styled.div``
-const Header = styled.div``
 
 interface PageTemplateProps {
     hideHeader?: boolean
@@ -17,7 +17,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
     children
 }) => (
     <PagaTemplateBlock style={style} className={className}>
-        {!hideHeader && <Header>Header</Header>}
+        {!hideHeader && <Header />}
         {children}
     </PagaTemplateBlock>
 )

@@ -1,30 +1,34 @@
 import React from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import './App.css'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import loadable from '@loadable/component'
+import styled from 'styled-components'
 
 const MainPage = loadable(() => import('./pages/MainPage'))
 const PostPage = loadable(() => import('./pages/PostPage'))
+
+const AppTemplate = styled.div`
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+    font-family: 'Noto Sans KR', sans-serif;
+`
 
 function App() {
     return (
         <Router>
             <HelmetProvider>
-                <div className='App'>
+                <AppTemplate className='App'>
                     <Helmet>
                         <title>DoriDori</title>
                         <meta name='description' content='도리도리 블로그' />
                         <meta property='fb:app_id' content='203040656938507' />
                     </Helmet>
-                    <Link to='/'>Go Home</Link>
-                    <Link to='/post'>Go Post</Link>
                     <Switch>
                         <Route path='/post' component={PostPage} />
+                        <Route path='/about' component={MainPage} />
                         <Route path='/' component={MainPage} />
                         <Route component={MainPage} />
                     </Switch>
-                </div>
+                </AppTemplate>
             </HelmetProvider>
         </Router>
     )
