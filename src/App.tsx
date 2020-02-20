@@ -23,7 +23,7 @@ function App() {
                         <meta property='fb:app_id' content='203040656938507' />
                     </Helmet>
                     <Switch>
-                        <Route path='/post' component={PostPage} />
+                        <Route path='/post/:title' component={PostPage} />
                         <Route path='/about' component={MainPage} />
                         <Route path='/' component={MainPage} />
                         <Route component={MainPage} />
