@@ -11,8 +11,8 @@ const HeaderTemplate = styled.div`
 `
 
 const HeaderLogo = styled.div`
-    @import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
-    font-family: 'Patua One', cursive;
+    @import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+    font-family: 'Fredoka One', cursive;
     color: #ffffff;
     padding: 0 40px;
     font-size: 30px;
@@ -21,18 +21,10 @@ const HeaderLogo = styled.div`
 
 const LinkButton = styled(Link)`
     color: #ffffff;
-    padding: 0 10px;
-    &:link {
-        color: #ffffff;
-        text-decoration: none;
-    }
-    &:visited {
-        color: #ffffff;
-        text-decoration: none;
-    }
+    padding: 0 15px;
+    text-decoration: none;
     &:hover {
-        color: #ffffff;
-        text-decoration: none;
+        text-decoration: underline;
     }
 `
 

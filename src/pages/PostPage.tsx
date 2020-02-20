@@ -1,6 +1,6 @@
 import * as React from 'react'
 import PageTemplate from '../components/base/PageTemplate'
-import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 
 interface PostPageProps {}
 
