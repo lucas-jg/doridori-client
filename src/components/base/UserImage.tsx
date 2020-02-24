@@ -19,6 +19,8 @@ const Name = styled.div`
     margin-left: 0.5rem;
 `
 
+//https://images.unsplash.com/photo-1422207134147-65fb81f59e38?ixlib=rb-1.2.1&auto=format&fit=crop&w=40&q=40
+
 interface UserImageProps {
     username: string
 }
@@ -26,10 +28,7 @@ interface UserImageProps {
 const UserImage: React.FC<UserImageProps> = ({ username }) => {
     return (
         <UserImageTemplate>
-            <ImageIcon
-                src='https://images.unsplash.com/photo-1422207134147-65fb81f59e38?ixlib=rb-1.2.1&auto=format&fit=crop&w=40&q=40'
-                alt='user-img'
-            />
+            <ImageIcon src={lucasIcon} alt='user-img' />
             <Name>{username}</Name>
         </UserImageTemplate>
     )
